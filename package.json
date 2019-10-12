@@ -1,0 +1,27 @@
+{
+  "name": "shaun-guimond",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontity project",
+  "keywords": [
+    "frontity"
+  ],
+  "scripts": {
+    "dev": "frontity dev",
+    "build": "frontity build",
+    "serve": "frontity serve"
+  },
+  "prettier": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.6",
+    "@frontity/core": "^1.3.0",
+    "@frontity/html2react": "^1.1.13",
+    "@frontity/mars-theme": "./packages/mars-theme",
+    "@frontity/tiny-router": "^1.0.16",
+    "@frontity/twentynineteen-theme": "./packages/twentynineteen-theme",
+    "@frontity/wp-source": "^1.4.1",
+    "frontity": "^1.4.1"
+  }
+}
