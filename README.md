@@ -17,5 +17,5 @@
  <h2>Shaun's Contact Information</h2>
  <ul>
 <li>🐦 <a href="https://twitter.com/Shagui88" target="_blank">Twitter</a></li>
-<li>✉ <a href="email:shaun.guimond@outlook.com" target="_blank">email</a></li>
+<li>✉ <a href="mailto:shaun.guimond@outlook.com" target="_blank">email</a></li>
  </ul>
