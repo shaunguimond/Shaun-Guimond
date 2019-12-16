@@ -9,7 +9,7 @@ const settings = {
   },
   "packages": [
     {
-      "name": "@frontity/twentynineteen-theme",
+      "name": "twentynineteen-theme",
       "state": {
         "theme": {
           "menu": [
