@@ -42,6 +42,12 @@ const Container = styled.div`
   position: relative;
   display: flex;
   padding-top: ${({ imageRatio }) => imageRatio}%;
+  box-shadow: 0 6.4px 14.4px 0 rgba(0,0,0,.132), 0 1.2px 3.6px 0 rgba(0,0,0,.108);
+
+@media (prefers-color-scheme: dark) {
+  box-shadow: 0 6.4px 14.4px 0 rgba(256,256,256,.132), 0 1.2px 3.6px 0 rgba(256,256,256,.108);
+
+}
 
   &::before,
   &::after {
