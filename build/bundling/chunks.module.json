@@ -1,10 +1,10 @@
 {
   "errors": [],
   "warnings": [],
-  "version": "4.41.5",
-  "hash": "0bf947aa15804188c6af",
+  "version": "4.44.2",
+  "hash": "503a1b64bcda436b7ee5",
   "publicPath": "/static/",
-  "outputPath": "C:\\Users\\shaun\\documents\\github\\Shaun-Guimond\\build\\static",
+  "outputPath": "C:\\Users\\shaun\\Documents\\GitHub\\Shaun-Guimond\\build\\static",
   "assetsByChunkName": {
     "list": "list.module.js",
     "shaun-guimond": "shaun-guimond.module.js"
@@ -12,7 +12,7 @@
   "assets": [
     {
       "name": "list.module.js",
-      "size": 154196,
+      "size": 162044,
       "chunks": [
         "list"
       ],
@@ -24,7 +24,7 @@
     },
     {
       "name": "shaun-guimond.module.js",
-      "size": 7181901,
+      "size": 7197885,
       "chunks": [
         "shaun-guimond"
       ],
