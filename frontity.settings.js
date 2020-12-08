@@ -9,6 +9,14 @@ const settings = {
   },
   "packages": [
     {
+      name: "@frontity/google-tag-manager-analytics",
+      state: {
+        googleTagManagerAnalytics: {
+          containerId: "GTM-596KLG4",
+        },
+      },
+    },
+    {
       "name": "twentynineteen-theme",
       "state": {
         "theme": {

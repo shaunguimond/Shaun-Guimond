@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, styled, css } from "frontity";
-import Link from "./link";
+import Link from "@frontity/components/link";
 
 const Nav = ({ state }) => (
   <Container id="site-navigation" ariaLabel="Top Menu">

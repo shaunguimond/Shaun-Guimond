@@ -2,17 +2,31 @@
   "errors": [],
   "warnings": [],
   "version": "4.44.2",
-  "hash": "c0cc553803f880291f9c",
+  "hash": "66922616c60954abc452",
   "publicPath": "/static/",
   "outputPath": "C:\\Users\\shaun\\Documents\\GitHub\\Shaun-Guimond\\build\\static",
   "assetsByChunkName": {
     "list": "list.module.js",
-    "shaun-guimond": "shaun-guimond.module.js"
+    "shaun-guimond": [
+      "shaun-guimond.module.js",
+      "shaun-guimond.5a59375da7a8e590d412.hot-update.js"
+    ]
   },
   "assets": [
     {
+      "name": "5a59375da7a8e590d412.hot-update.json",
+      "size": 55,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "list.module.js",
-      "size": 162044,
+      "size": 168483,
       "chunks": [
         "list"
       ],
@@ -20,11 +34,26 @@
         "list"
       ],
       "info": {},
-      "emitted": true
+      "emitted": false
+    },
+    {
+      "name": "shaun-guimond.5a59375da7a8e590d412.hot-update.js",
+      "size": 23758,
+      "chunks": [
+        "shaun-guimond"
+      ],
+      "chunkNames": [
+        "shaun-guimond"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
     },
     {
       "name": "shaun-guimond.module.js",
-      "size": 7318356,
+      "size": 7376368,
       "chunks": [
         "shaun-guimond"
       ],
@@ -32,8 +61,7 @@
         "shaun-guimond"
       ],
       "info": {},
-      "emitted": true,
-      "isOverSizeLimit": true
+      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -43,7 +71,8 @@
         "shaun-guimond"
       ],
       "assets": [
-        "shaun-guimond.module.js"
+        "shaun-guimond.module.js",
+        "shaun-guimond.5a59375da7a8e590d412.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -55,7 +84,8 @@
         "shaun-guimond"
       ],
       "assets": [
-        "shaun-guimond.module.js"
+        "shaun-guimond.module.js",
+        "shaun-guimond.5a59375da7a8e590d412.hot-update.js"
       ],
       "children": {},
       "childAssets": {}

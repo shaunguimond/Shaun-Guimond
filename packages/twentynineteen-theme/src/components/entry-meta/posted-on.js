@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import Link from "../link";
+import Link from "@frontity/components/link";
 import DateIcon from "../icons/date-icon";
 
 const PostedOn = ({ state, post }) => {
