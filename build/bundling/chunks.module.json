@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "4.44.2",
-  "hash": "9f80fd861da0e2b43cd9",
+  "hash": "c0cc553803f880291f9c",
   "publicPath": "/static/",
   "outputPath": "C:\\Users\\shaun\\Documents\\GitHub\\Shaun-Guimond\\build\\static",
   "assetsByChunkName": {
@@ -20,7 +20,7 @@
         "list"
       ],
       "info": {},
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "shaun-guimond.module.js",
