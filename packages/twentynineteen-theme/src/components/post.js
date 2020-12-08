@@ -7,6 +7,7 @@ import Author from "./entry-meta/author";
 import PostedOn from "./entry-meta/posted-on";
 import Categories from "./entry-meta/categories";
 import Tags from "./entry-meta/tags";
+import Comments from "./comments/index";
 
 const PostHeader = ({ post }) => (
   <PostTitle>
@@ -66,6 +67,7 @@ const Post = ({ state, actions, libraries }) => {
             </EntryFooter>
           ) : null}
         </Article>
+        <Comments postId={post.id} />
       </Section>
     </>
   );
@@ -131,25 +133,18 @@ const Title = styled.h1`
 
 const Article = styled.article`
   max-width: calc(100% - 2rem);
-  margin: 0px 1rem;
+  margin: auto 1rem;
   overflow: hidden;
   font-family: "Segoe UI", "Baskerville Old Face", Garamond,
     "Times New Roman", serif;
 
   @media only screen and (min-width: 768px) {
-    max-width: 80%;
-    margin: 0px 10%;
-    padding: 0px 60px;
+    max-width: 844px;
+    margin: 0px auto;
   }
 
   p {
     line-height: 39.6px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    p {
-      max-width: calc(66.6667vw - 28px);
-    }
   }
 
   figure {
