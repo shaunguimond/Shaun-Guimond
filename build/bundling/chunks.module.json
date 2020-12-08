@@ -2,28 +2,14 @@
   "errors": [],
   "warnings": [],
   "version": "4.44.2",
-  "hash": "10b2d728099173da6fcf",
+  "hash": "9f80fd861da0e2b43cd9",
   "publicPath": "/static/",
   "outputPath": "C:\\Users\\shaun\\Documents\\GitHub\\Shaun-Guimond\\build\\static",
   "assetsByChunkName": {
     "list": "list.module.js",
-    "shaun-guimond": [
-      "shaun-guimond.module.js",
-      "shaun-guimond.6823fd7029a2e0e9970c.hot-update.js"
-    ]
+    "shaun-guimond": "shaun-guimond.module.js"
   },
   "assets": [
-    {
-      "name": "6823fd7029a2e0e9970c.hot-update.json",
-      "size": 55,
-      "chunks": [],
-      "chunkNames": [],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
     {
       "name": "list.module.js",
       "size": 162044,
@@ -37,23 +23,8 @@
       "emitted": false
     },
     {
-      "name": "shaun-guimond.6823fd7029a2e0e9970c.hot-update.js",
-      "size": 17443,
-      "chunks": [
-        "shaun-guimond"
-      ],
-      "chunkNames": [
-        "shaun-guimond"
-      ],
-      "info": {
-        "hotModuleReplacement": true,
-        "immutable": true
-      },
-      "emitted": false
-    },
-    {
       "name": "shaun-guimond.module.js",
-      "size": 7315865,
+      "size": 7318356,
       "chunks": [
         "shaun-guimond"
       ],
@@ -61,7 +32,8 @@
         "shaun-guimond"
       ],
       "info": {},
-      "emitted": false
+      "emitted": true,
+      "isOverSizeLimit": true
     }
   ],
   "filteredAssets": 0,
@@ -71,8 +43,7 @@
         "shaun-guimond"
       ],
       "assets": [
-        "shaun-guimond.module.js",
-        "shaun-guimond.6823fd7029a2e0e9970c.hot-update.js"
+        "shaun-guimond.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -84,8 +55,7 @@
         "shaun-guimond"
       ],
       "assets": [
-        "shaun-guimond.module.js",
-        "shaun-guimond.6823fd7029a2e0e9970c.hot-update.js"
+        "shaun-guimond.module.js"
       ],
       "children": {},
       "childAssets": {}

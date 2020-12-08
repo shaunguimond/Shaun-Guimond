@@ -165,11 +165,6 @@ const Article = styled.article`
     }
   }
 
-  iframe {
-    display: block;
-    margin: auto;
-  }
-
   blockquote {
     margin: 32px 0;
     border-left: 2px solid ${({ theme }) => theme.color};
@@ -227,10 +222,9 @@ const Article = styled.article`
   }
 
   & .wp-block-image img {
-    object-fit: cover;
+    display: block;
     width: 100%;
     display: block;
-    max-height: 98vh;
     padding: 0.33px;
   }
 
@@ -242,6 +236,22 @@ const Article = styled.article`
   @media (prefers-color-scheme: dark) {
     & .wp-block-image {
       box-shadow: 0 6.4px 14.4px 0 rgba(256,256,256,.132), 0 1.2px 3.6px 0 rgba(256,256,256,.108);
+    }
+  }
+
+  .wp-block-embed__wrapper {
+    width: 100%;
+    position: relative;
+    padding-top:  56.25%;
+    height: 0px;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
   }
 
