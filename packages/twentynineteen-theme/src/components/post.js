@@ -82,8 +82,7 @@ const Section = styled.div`
 
 const EntryMeta = styled.div`
   margin-bottom: 1rem !important;
-  color: ${({ theme }) =>
-    theme.featured.showOnPost ? "white" : "rgb(118, 118, 118)"};
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -239,7 +238,7 @@ const Article = styled.article`
     }
   }
 
-  .wp-block-embed__wrapper {
+  .wp-embed-aspect-16-9 {
     width: 100%;
     position: relative;
     padding-top:  56.25%;
@@ -253,6 +252,10 @@ const Article = styled.article`
       height: 100%;
       border: 0;
     }
+  }
+
+  .frontity-lazy-iframe {
+    border: 0px;
   }
 
   /*Gallery*/
@@ -577,7 +580,7 @@ const SiteFeaturedImage = styled.div`
     mix-blend-mode: multiply;
     opacity: 0.8;
     z-index: 3;
-    background: ${({ theme }) => theme.color};
+    background-color: #008077;
   }
 
   &::before {

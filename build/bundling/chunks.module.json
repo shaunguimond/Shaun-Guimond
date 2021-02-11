@@ -1,20 +1,20 @@
 {
   "errors": [],
   "warnings": [],
-  "version": "4.44.2",
-  "hash": "66922616c60954abc452",
+  "version": "4.46.0",
+  "hash": "981ecbe7bc964d5e9afb",
   "publicPath": "/static/",
-  "outputPath": "C:\\Users\\shaun\\Documents\\GitHub\\Shaun-Guimond\\build\\static",
+  "outputPath": "C:\\Users\\shaun\\Documents\\Github\\Shaun-Guimond\\build\\static",
   "assetsByChunkName": {
     "list": "list.module.js",
     "shaun-guimond": [
       "shaun-guimond.module.js",
-      "shaun-guimond.5a59375da7a8e590d412.hot-update.js"
+      "shaun-guimond.aec7dc7170582ba7ffbe.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "5a59375da7a8e590d412.hot-update.json",
+      "name": "aec7dc7170582ba7ffbe.hot-update.json",
       "size": 55,
       "chunks": [],
       "chunkNames": [],
@@ -26,7 +26,7 @@
     },
     {
       "name": "list.module.js",
-      "size": 168483,
+      "size": 170522,
       "chunks": [
         "list"
       ],
@@ -37,8 +37,8 @@
       "emitted": false
     },
     {
-      "name": "shaun-guimond.5a59375da7a8e590d412.hot-update.js",
-      "size": 23758,
+      "name": "shaun-guimond.aec7dc7170582ba7ffbe.hot-update.js",
+      "size": 203178,
       "chunks": [
         "shaun-guimond"
       ],
@@ -53,7 +53,7 @@
     },
     {
       "name": "shaun-guimond.module.js",
-      "size": 7376368,
+      "size": 8842427,
       "chunks": [
         "shaun-guimond"
       ],
@@ -72,7 +72,7 @@
       ],
       "assets": [
         "shaun-guimond.module.js",
-        "shaun-guimond.5a59375da7a8e590d412.hot-update.js"
+        "shaun-guimond.aec7dc7170582ba7ffbe.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -85,7 +85,7 @@
       ],
       "assets": [
         "shaun-guimond.module.js",
-        "shaun-guimond.5a59375da7a8e590d412.hot-update.js"
+        "shaun-guimond.aec7dc7170582ba7ffbe.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -101,6 +101,55 @@
       "childAssets": {}
     }
   },
+  "chunks": [
+    {
+      "id": "list",
+      "rendered": false,
+      "initial": false,
+      "entry": false,
+      "size": 118505,
+      "names": [
+        "list"
+      ],
+      "files": [
+        "list.module.js"
+      ],
+      "hash": "3fe73a6bde0a4123eeec",
+      "siblings": [],
+      "parents": [
+        "shaun-guimond"
+      ],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [],
+      "filteredModules": 0,
+      "origins": []
+    },
+    {
+      "id": "shaun-guimond",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 2522674,
+      "names": [
+        "shaun-guimond"
+      ],
+      "files": [
+        "shaun-guimond.module.js",
+        "shaun-guimond.aec7dc7170582ba7ffbe.hot-update.js"
+      ],
+      "hash": "31b562e2c29ecfa006cd",
+      "siblings": [],
+      "parents": [],
+      "children": [
+        "list"
+      ],
+      "childrenByOrder": {},
+      "modules": [],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
   "logging": {
     "webpack.buildChunkGraph.visitModules": {
       "entries": [],
@@ -108,5 +157,6 @@
       "debug": false
     }
   },
-  "children": []
+  "children": [],
+  "generator": "loadable-components"
 }

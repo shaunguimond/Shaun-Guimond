@@ -1,5 +1,7 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
+import link from "@frontity/html2react/processors/link";
+import iframe from "@frontity/html2react/processors/iframe";
 
 const twentyNineteenTheme = {
   name: "twentynineteen-theme",
@@ -11,19 +13,19 @@ const twentyNineteenTheme = {
       color: "#008077",
       menu: [],
       featured: {
-        showOnList: false,
-        showOnPost: false
-      }
-    }
+        showOnList: true,
+        showOnPost: true,
+      },
+    },
   },
   actions: {
-    theme: {}
+    theme: {},
   },
   libraries: {
     html2react: {
-      processors: [image]
-    }
-  }
+      processors: [image, link, iframe],
+    },
+  },
 };
 
 export default twentyNineteenTheme;

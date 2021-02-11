@@ -1,13 +1,13 @@
 const settings = {
-  "name": "shaun-guimond",
-  "state": {
-    "frontity": {
-      "url": "https://shaunguimond.com",
-      "title": "Shaun Guimond",
-      "description": "A blog for business, travel and technology."
+  name: "shaun-guimond",
+  state: {
+    frontity: {
+      url: "https://shaunguimond.com",
+      title: "Shaun Guimond",
+      description: "A blog for business, travel and technology."
     }
   },
-  "packages": [
+  packages: [
     {
       name: "@frontity/google-tag-manager-analytics",
       state: {
@@ -17,10 +17,11 @@ const settings = {
       },
     },
     {
-      "name": "twentynineteen-theme",
-      "state": {
-        "theme": {
-          "menu": [
+      name: "twentynineteen-theme",
+      state: {
+        theme: {
+          color: "#008077",
+          menu: [
             [
               "Home",
               "/"
@@ -46,7 +47,7 @@ const settings = {
               "/about-shaun/"
             ]
           ],
-          "featured": {
+          featured: {
             "showOnList": true,
             "showOnPost": true
           },
@@ -55,10 +56,10 @@ const settings = {
       }
     },
     {
-      "name": "@frontity/wp-source",
-      "state": {
-        "source": {
-          "api": "https://wp.shaunguimond.com/wp-json"
+      name: "@frontity/wp-source",
+      state: {
+        source: {
+          url: "https://wp.shaunguimond.com"
         }
       }
     },
