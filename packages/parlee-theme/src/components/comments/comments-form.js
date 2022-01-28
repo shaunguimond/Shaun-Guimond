@@ -84,6 +84,7 @@ const Container = styled.div`
     margin: 2rem auto;
     padding: 8px;
     background-color: var(--background);
+    border-radius: 8px;
     h3 {
       color: var(--darktext);
       text-align: center;
@@ -106,6 +107,7 @@ const CommentContentLabel = styled.label`
         border: black 0px solid;
         margin-left: 15px;
         color: var(--text);
+        border-radius: 8px;
 
     }
     & textarea::placeholder {
@@ -124,6 +126,7 @@ const CommentNameLabel = styled.label`
         border: black 0px solid;
         margin-left: 15px;
         color: var(--text);
+        border-radius: 8px;
     }
     & input::placeholder {
       color: var(--text);
@@ -140,6 +143,7 @@ const CommentEmailLabel = styled.label`
         border: black 0px solid;
         margin-left: 15px;
         color: var(--text);
+        border-radius: 8px;
     }
     & input::placeholder {
       color: var(--text);
@@ -154,11 +158,16 @@ const CommentFormSubmit = styled.input`
     border: black 0px solid;
     margin-left: 23px;
     color: var(--text);
+    border-radius: 8px;
 
 
     &:hover {
       background-color: var(--background);
       color: var(--darktext);
+      cursor: pointer;
+      -webkit-box-shadow: inset 0px 0px 5px 0px var(--formbackground);
+      -moz-box-shadow: inset 0px 0px 5px 0px var(--formbackground);
+      box-shadow: inset 0px 0px 5px 0px var(--formbackground);
     }
 `;
 

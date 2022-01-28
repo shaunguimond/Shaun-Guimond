@@ -19,7 +19,7 @@ const Footer = () => {
                 <GridItem>
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/category/projects">Projects</a></li>
                         <li><a href="/about-shaun">About</a></li>
                         <li><a href="/privacy-policy">Privacy Policy</a></li>
 

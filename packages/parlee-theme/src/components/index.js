@@ -266,16 +266,26 @@ const globalStyles = css`
 
 .port-card {
   backdrop-filter: blur(12px);
-  background-color: var(--formbackground);
+  background-color: var(--cardbackground);
   padding: 10px;
   border-radius: 12px;
   box-shadow: 0 3.2px 7.2px 0 rgba(0,0,0,.132), 0 0.6px 1.8px 0 rgba(0,0,0,.108);
+  margin: 32px 0px 32px 0px;
 }
 
 .lg-margins {
-  margin-right: 64px;
-  margin-left: 64px;
+  margin-right: 16px;
+  margin-left: 16px;
 
+}
+
+@media only screen and (min-width: 798px) {
+  .lg-margins {
+    margin-right: 64px;
+    margin-left: 64px;
+  
+  }
+  
 }
 
 
