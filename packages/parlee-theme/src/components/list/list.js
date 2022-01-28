@@ -7,15 +7,16 @@ const List = ({ state }) => {
   const data = state.source.get(state.router.link);
 
   return (
-    <Container>
-      {/* If the list is a taxonomy, we render a title. */}
-      {data.isTaxonomy && (
+    <Section>
+    {/* If the list is a taxonomy, we render a title. */}
+    {data.isTaxonomy && (
         <Header>
           {data.taxonomy}:{" "}
           <b>{decode(state.source[data.taxonomy][data.id].name)}</b>
         </Header>
       )}
-
+    <Container>
+    
       {/* If the list is for a specific author, we render a title. */}
       {data.isAuthor && (
         <Header>
@@ -30,21 +31,35 @@ const List = ({ state }) => {
         return <Item key={item.id} item={item} />;
       })}
       <Pagination />
-    </Container>
+      </Container>
+    </Section>
   );
 };
 
 export default connect(List);
 
-const Container = styled.section`
-  width: 800px;
-  margin: 0;
+const Section = styled.section`
+  width: 100%;
+  margin: 0px;
   padding: 24px;
   list-style: none;
+  margin-top: 106px;
+  min-height: 100vh;
+
+`;
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 800px));
+  grid-gap: 32px;
+  justify-content: center;
+  
+
 `;
 
 const Header = styled.h3`
   font-weight: 300;
   text-transform: capitalize;
-  color: rgba(12, 17, 43, 0.9);
+  color: var(--text);
+  text-align: center;
 `;

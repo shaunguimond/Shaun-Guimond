@@ -4,7 +4,7 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
 const marsTheme = {
-  name: "@frontity/mars-theme",
+  name: "parlee-theme",
   roots: {
     /**
      * In Frontity, any package can add React components to the site.
@@ -25,6 +25,7 @@ const marsTheme = {
         showOnList: false,
         showOnPost: false,
       },
+      mode: "light",
     },
   },
 
@@ -39,6 +40,29 @@ const marsTheme = {
       },
       closeMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = false;
+      },
+      afterCSR: ({ state }) => {
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        if (window.localStorage.getItem("mode") === "light") {
+          state.theme.mode = 'light';
+        } else if (window.localStorage.getItem("mode") === "dark") {
+          state.theme.mode = 'dark';
+        } else {
+          if (prefersDarkScheme.matches) {
+            state.theme.mode = 'dark';
+          }
+        };
+        if (window.localStorage.getItem("text") === "large") {
+          state.theme.text = 'large';
+        }
+      },
+      setLightMode: ({state}) => {
+        state.theme.mode = 'light';
+        window.localStorage.setItem("mode", "light");
+      },
+      setDarkMode: ({state}) => {
+        state.theme.mode = 'dark';
+        window.localStorage.setItem("mode", "dark");
       },
     },
   },

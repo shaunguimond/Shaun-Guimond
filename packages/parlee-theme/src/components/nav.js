@@ -10,9 +10,7 @@ const Nav = ({ state }) => (
   <NavContainer>
     {state.theme.menu.map(([name, link]) => {
       // Check if the link matched the current page url
-      const data = state.source.get(state.router.link);
-      const isCurrentPage = data.route === link;
-
+      const isCurrentPage = state.router.link === link;
       return (
         <NavItem key={name}>
           {/* If link url is the current page, add `aria-current` for a11y */}
@@ -30,14 +28,15 @@ export default connect(Nav);
 const NavContainer = styled.nav`
   list-style: none;
   display: flex;
-  width: 848px;
+  width: 980px;
   max-width: 100%;
   box-sizing: border-box;
   padding: 0 24px;
   margin: 0;
   overflow-x: auto;
+  justify-content: flex-start;
 
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 1080px) {
     display: none;
   }
 `;
@@ -46,7 +45,7 @@ const NavItem = styled.div`
   padding: 0;
   margin: 0 16px;
   color: #fff;
-  font-size: 0.9em;
+  font-size: 1.1em;
   box-sizing: border-box;
   flex-shrink: 0;
 

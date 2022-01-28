@@ -3,6 +3,7 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import List from "./list";
 import FeaturedMedia from "./featured-media";
+import Comments from "./comments/index";
 
 /**
  * The Post component that Mars uses to render any kind of "post type", like
@@ -87,6 +88,7 @@ const Post = ({ state, actions, libraries }) => {
           <Html2React html={post.content.rendered} />
         </Content>
       )}
+      <Comments postId={post.id} />
     </Container>
   ) : null;
 };
@@ -97,13 +99,15 @@ const Container = styled.div`
   width: 800px;
   margin: 0;
   padding: 24px;
+  min-height: 100vh;
+  margin-top: 106px;
 `;
 
 const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
-  color: rgba(12, 17, 43);
+  color: var(--text);
 `;
 
 const StyledLink = styled(Link)`
@@ -111,13 +115,13 @@ const StyledLink = styled(Link)`
 `;
 
 const Author = styled.p`
-  color: rgba(12, 17, 43, 0.9);
+  color: var(--text);
   font-size: 0.9em;
   display: inline;
 `;
 
 const DateWrapper = styled.p`
-  color: rgba(12, 17, 43, 0.9);
+  color: var(--text);
   font-size: 0.9em;
   display: inline;
 `;
@@ -127,7 +131,7 @@ const DateWrapper = styled.p`
  * selectors to style that HTML.
  */
 const Content = styled.div`
-  color: rgba(12, 17, 43, 0.8);
+  color: var(--text);
   word-break: break-word;
 
   * {
@@ -146,7 +150,8 @@ const Content = styled.div`
 
   figure {
     margin: 24px auto;
-    width: 100%;
+    /* next line overrides an inline style of the figure element. */
+    width: 100% !important;
 
     figcaption {
       font-size: 0.7em;
@@ -166,7 +171,7 @@ const Content = styled.div`
   }
 
   a {
-    color: rgb(31, 56, 197);
+    color: var(--link);
     text-decoration: underline;
   }
 
@@ -242,6 +247,30 @@ const Content = styled.div`
     .alignleft {
       float: left;
       margin-right: 24px;
+    }
+  }
+
+
+  /* Wordpress Gallery Block*/
+
+
+  .wp-block-gallery {
+    width: 100%;
+
+    .blocks-gallery-grid {
+      display: grid;
+      width: 100%;
+      list-style-type: none;
+      padding-left: 0px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      /* This is better for small screens, once min() is better supported */
+      /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+      gap: 1rem;
+
+      figure {
+        margin: 0px;
+        
+      }
     }
   }
 `;

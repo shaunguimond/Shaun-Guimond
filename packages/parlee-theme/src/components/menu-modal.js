@@ -1,20 +1,13 @@
-import { styled, connect, useConnect } from "frontity";
+import { styled, connect } from "frontity";
 import Link from "./link";
 
-/**
- * The modal containing the mobile menu items.
- *
- * @param props - The props passed to the component from parent.
- * @returns A React component.
- */
-const MenuModal = ({ ...props }) => {
-  const { state } = useConnect();
+const MenuModal = ({ state }) => {
   const { menu } = state.theme;
-  const isThereLinks = menu?.length > 0;
+  const isThereLinks = menu != null && menu.length > 0;
 
   return (
-    <div {...props}>
-      {state.frontity.mode !== "amp" && <MenuOverlay />}
+    <>
+      <MenuOverlay />
       <MenuContent as="nav">
         {isThereLinks &&
           menu.map(([name, link]) => (
@@ -27,12 +20,13 @@ const MenuModal = ({ ...props }) => {
             </MenuLink>
           ))}
       </MenuContent>
-    </div>
+    </>
   );
 };
 
 const MenuOverlay = styled.div`
-  background-color: #1f38c5;
+  backdrop-filter: blur(12px);
+  background-color: var(--mobilebackground);
   width: 100vw;
   height: 100vh;
   overflow: hidden auto;
@@ -40,30 +34,39 @@ const MenuOverlay = styled.div`
   z-index: 2;
   top: 0;
   left: 0;
+  margin-left: -5px;
+  margin-top: -5px;
 `;
 
 const MenuContent = styled.div`
   z-index: 3;
-  position: relative;
+  position: fixed;
+  max-width: 250px;
+  top: 100px;
+  right: calc(50% - 125px);
+  color: var(--darktext);
 `;
 
 const MenuLink = styled(Link)`
   width: 100%;
   display: inline-block;
   outline: 0;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
   padding: 1.2rem 0;
+  color: var(--darktext);
+  border-radius: 12px;
 
   &:hover,
   &:focus {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.25);
   }
   /* styles for active link */
   &[aria-current="page"] {
-    color: yellow;
+    color: #72e0b8;
     font-weight: bold;
+    /* border-bottom: 4px solid yellow; */
   }
 `;
 
-export default connect(MenuModal, { injectProps: false });
+export default connect(MenuModal);

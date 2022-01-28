@@ -2,14 +2,22 @@ const settings = {
   "name": "shaun-guimond",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "https://shaunguimond.com",
+      "title": "Shaun Guimond",
+      "description": "A blog for business, travel and technology."
     }
   },
   "packages": [
     {
-      "name": "@frontity/mars-theme",
+      name: "@frontity/google-tag-manager-analytics",
+      state: {
+        googleTagManagerAnalytics: {
+          containerId: "GTM-596KLG4",
+        },
+      },
+    },
+    {
+      "name": "parlee-theme",
       "state": {
         "theme": {
           "menu": [
@@ -18,24 +26,28 @@ const settings = {
               "/"
             ],
             [
-              "Nature",
-              "/category/nature/"
+              "Business",
+              "/category/business/"
             ],
             [
-              "Travel",
-              "/category/travel/"
+              "Travels",
+              "/category/travels/"
             ],
             [
-              "Japan",
-              "/tag/japan/"
+              "Technology",
+              "/category/technology/"
             ],
             [
-              "About Us",
-              "/about-us/"
+              "Projects",
+              "/category/projects/"
+            ],
+            [
+              "About Shaun",
+              "/about-shaun/"
             ]
           ],
           "featured": {
-            "showOnList": false,
+            "showOnList": true,
             "showOnPost": false
           }
         }
@@ -45,12 +57,14 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": "https://wp.shaunguimond.com"
         }
       }
     },
     "@frontity/tiny-router",
-    "@frontity/html2react"
+    "@frontity/html2react",
+    "@frontity/head-tags",
+    "@frontity/wp-comments"
   ]
 };
 

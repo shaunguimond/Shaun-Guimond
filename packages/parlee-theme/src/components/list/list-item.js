@@ -15,10 +15,27 @@ const Item = ({ state, item }) => {
   const date = new Date(item.date);
 
   return (
-    <article>
+    <Article>
+      
+
+      {/*
+       * If the want to show featured media in the
+       * list of featured posts, we render the media.
+       */}
+       
+      <Link link={item.link}>
+      {state.theme.featured.showOnList && (
+        <FeaturedMedia id={item.featured_media} />
+      )}</Link>
+
+      <TextContainer> 
       <Link link={item.link}>
         <Title dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
       </Link>
+      {/* If the post has an excerpt (short summary text), we render it */}
+      {item.excerpt && (
+        <Excerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+      )}
 
       <div>
         {/* If the post has an author, we render a clickable author text. */}
@@ -34,29 +51,27 @@ const Item = ({ state, item }) => {
           on <b>{date.toDateString()}</b>
         </PublishDate>
       </div>
-
-      {/*
-       * If the want to show featured media in the
-       * list of featured posts, we render the media.
-       */}
-      {state.theme.featured.showOnList && (
-        <FeaturedMedia id={item.featured_media} />
-      )}
-
-      {/* If the post has an excerpt (short summary text), we render it */}
-      {item.excerpt && (
-        <Excerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
-      )}
-    </article>
+      </TextContainer>
+    </Article>
   );
 };
 
 // Connect the Item to gain access to `state` as a prop
 export default connect(Item);
 
+const Article = styled.article`
+  background-color: var(--cardbackground);
+  border-radius: 8px;
+
+`;
+
+const TextContainer = styled.div`
+  padding: 1rem;
+`;
+
 const Title = styled.h1`
   font-size: 2rem;
-  color: rgba(12, 17, 43);
+  color: var(--text);
   margin: 0;
   padding-top: 24px;
   padding-bottom: 8px;
@@ -64,7 +79,7 @@ const Title = styled.h1`
 `;
 
 const AuthorName = styled.span`
-  color: rgba(12, 17, 43, 0.9);
+  color: var(--text);
   font-size: 0.9em;
 `;
 
@@ -73,11 +88,11 @@ const StyledLink = styled(Link)`
 `;
 
 const PublishDate = styled.span`
-  color: rgba(12, 17, 43, 0.9);
+  color: var(--text);
   font-size: 0.9em;
 `;
 
 const Excerpt = styled.div`
   line-height: 1.6em;
-  color: rgba(12, 17, 43, 0.8);
+  color: var(--text);
 `;

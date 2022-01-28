@@ -2,6 +2,7 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import Nav from "./nav";
 import MobileMenu from "./menu";
+import Toggle from "./toggle";
 
 const Header = ({ state }) => {
   return (
@@ -10,10 +11,12 @@ const Header = ({ state }) => {
         <StyledLink link="/">
           <Title>{state.frontity.title}</Title>
         </StyledLink>
-        <Description>{state.frontity.description}</Description>
+        <Nav />
+        <div className="buttons">
+        <Toggle />
         <MobileMenu />
+        </div>
       </Container>
-      <Nav />
     </>
   );
 };
@@ -22,19 +25,26 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const Container = styled.div`
-  width: 848px;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 24px;
-  color: #fff;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+}
+  
+
 `;
 
 const Title = styled.h2`
   margin: 0;
-  margin-bottom: 16px;
+  width: 250px;
+  color: var(--darktext);
 `;
 
 const Description = styled.h4`
@@ -44,4 +54,7 @@ const Description = styled.h4`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  width: fit-content;
+  margin-left: 48px;
+  max-width: 150px;
 `;
