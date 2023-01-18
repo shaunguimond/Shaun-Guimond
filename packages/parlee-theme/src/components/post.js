@@ -160,7 +160,9 @@ const Content = styled.div`
 
   iframe {
     display: block;
-    margin: auto;
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
   }
 
   blockquote {

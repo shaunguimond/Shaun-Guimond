@@ -56,7 +56,7 @@ const Footer = () => {
 export default connect(Footer);
 
 const Container = styled.div`
-    background-color: var(--background);
+    background-color: var(--postbackground);
     color: var(--darktext);
     padding-bottom: 5px;
 
