@@ -275,4 +275,8 @@ const Content = styled.div`
       }
     }
   }
+
+  .wp-block-columns .wp-block-image {
+    margin-bottom: 12px;
+  }
 `;
