@@ -1,5 +1,5 @@
 import { connect, styled } from "frontity";
-import { LinkedIn, Twitter, Polywork } from "./icons/social-media-icons";
+import { LinkedIn, Threads, Polywork,Github } from "./icons/social-media-icons";
 
 
 const Footer = () => {
@@ -10,9 +10,10 @@ const Footer = () => {
         <Container>
             <ContainerCard>
                 <SocialContainer>
-                    <Twitter />
                     <LinkedIn />
                     <Polywork />
+                    <Github />
+                    <Threads />
 
                 </SocialContainer>
             <GridContainer>
